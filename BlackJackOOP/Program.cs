@@ -2,11 +2,20 @@
 
 namespace BlackJackOOP
 {
-    namespace BlackJackOOP
-    {
         internal class Program
         {
-            static void Main(string[] args)
+            static void Roulette()
+            {
+                RouletteJatek jatek = new RouletteJatek();
+
+
+                jatek.JatekInditasa();
+
+
+                Console.WriteLine("\nA program leáll. Nyomj egy gombot...");
+                Console.ReadKey();
+            }
+            static void BlackJack()
             {
                 string v = "";
                 string valasz = "";
@@ -97,9 +106,36 @@ namespace BlackJackOOP
                     }
 
                 }
+            }
+            static void Main(string[] args)
+            {
 
+                Console.WriteLine("Roulette - 1");
+                Console.WriteLine("Black Jack - 2");
+                Console.Write("Mivel akarsz játszani: ");
+                string valasz = Console.ReadLine();
+                do
+                {
+                    if (valasz == "1")
+                    {
+                        Roulette();
+                        return;
+
+                    }
+                    else if (valasz == "2")
+                    {
+                        BlackJack();
+                        return;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Bruthaa 2 számból nem birtal egyetse beutni...");
+
+                    }
+
+                }
+                while (valasz != "1" || valasz != "2");
             }
         }
-    }
-
 }
+
