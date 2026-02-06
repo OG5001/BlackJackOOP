@@ -11,6 +11,8 @@ namespace BlackJackOOP
         private List<(Kartya.Szin, Kartya.Figura)> lapok = new();
         private Random rnd = new();
 
+        internal List<(Kartya.Szin, Kartya.Figura)> Lapok { get => lapok; set => lapok = value; }
+
         public void Keszites()
         {
             lapok.Clear();

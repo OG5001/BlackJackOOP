@@ -9,7 +9,7 @@ namespace BlackJackOOP
 {
     internal class Oszto
     {
-        public List<(Kartya.Szin, Kartya.Figura)> Kez { get; } = new();
+        private List<(Kartya.Szin, Kartya.Figura)> Kez { get; } = new();
 
         public void LapotKap((Kartya.Szin, Kartya.Figura) lap)
         {

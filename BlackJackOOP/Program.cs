@@ -109,13 +109,14 @@ namespace BlackJackOOP
             }
             static void Main(string[] args)
             {
-
+                string valasz = "";
                 Console.WriteLine("Roulette - 1");
                 Console.WriteLine("Black Jack - 2");
-                Console.Write("Mivel akarsz játszani: ");
-                string valasz = Console.ReadLine();
                 do
                 {
+                    Console.Write("Mivel akarsz játszani: ");
+                    valasz = Console.ReadLine();
+                    Console.WriteLine();
                     if (valasz == "1")
                     {
                         Roulette();
@@ -129,7 +130,7 @@ namespace BlackJackOOP
                     }
                     else
                     {
-                        Console.WriteLine("Bruthaa 2 számból nem birtal egyetse beutni...");
+                        Console.WriteLine("Nem jót írtál be! Üss 1-est vagy 2-est!");
 
                     }
 
